@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DirectFetch</title>
+  <link rel="icon" type="image/png" href="/static/neon-globe-download-hub.png" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <img class="mark" src="/static/neon-globe-download-hub.png" alt="DirectFetch icon" />
+        <div>
+          <h1>DirectFetch</h1>
+          <p>Search the web, look at it, then download.</p>
+        </div>
+      </div>
+      <form id="search-form" class="search">
+        <input id="query" type="search" placeholder="What do you want to download?" autocomplete="off" autofocus />
+        <button type="submit">Find</button>
+      </form>
+      <div class="filters" role="tablist">
+        <button class="chip active" data-filter="any">Anything</button>
+        <button class="chip" data-filter="windows">Windows</button>
+        <button class="chip" data-filter="installer">Installer</button>
+        <button class="chip" data-filter="pdf">PDF</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="results-pane">
+        <div class="pane-label">Results</div>
+        <div id="ranking-status" class="ranking-status" hidden></div>
+        <div id="results" class="results empty-state">Type a name, app, file, or topic. DirectFetch searches the web, shows you the content, and only then lets you download it to your Downloads folder.</div>
+      </section>
+      <section class="preview-pane">
+        <div class="pane-label">Preview before download</div>
+        <div id="preview" class="preview empty-state">Pick a result. You will see what it actually is before it hits Downloads.</div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
